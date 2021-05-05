@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  app:
+    image: 'node'
+    command: bash -c 'npm install && npm start'
+    ports:
+      - '8080:8080'
+    working_dir: '/hostdir'
+    volumes:
+      - './:/hostdir'

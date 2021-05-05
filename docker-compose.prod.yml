@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+    hq-browser:
+        image: node
+        restart: always
+        working_dir: '/hostdir'
+        volumes:
+            - './:/hostdir'
+        command: bash -c 'npm install && npm start'
+        networks:
+            - default
+            - publicNet
+        labels:
+            traefik.docker.network: publicNet
+            traefik.enable: true
+            traefik.protocol: http
+            traefik.port: 8080
+            traefik.frontend.rule: "Host:upupup.co"
+networks:
+  publicNet:
+      external: true

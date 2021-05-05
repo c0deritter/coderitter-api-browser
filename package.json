@@ -1,0 +1,35 @@
+{
+  "name": "hq-browser",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "webpack",
+    "buildServer": "tsc -p tsconfig.server.json",
+    "start": "node server/server.js",
+    "test": "mocha -r ts-node/register \"test/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@types/react": "^16.14.2",
+    "@types/react-dom": "^16.9.10",
+    "@types/react-router-dom": "^5.1.6",
+    "@types/ws": "^6.0.4",
+    "coderitter-api-remote-method-call": "^4.0.1",
+    "html-webpack-inline-source-plugin": "0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "knight-change": "^1.0.0",
+    "knight-i18n": "^1.0.0",
+    "knight-json": "^1.0.1",
+    "knight-log": "^1.0.0",
+    "knight-object-db": "^1.0.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-router-dom": "^5.2.0",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.2.2",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7",
+    "webpack-cli": "^3.3.12"
+  }
+}
